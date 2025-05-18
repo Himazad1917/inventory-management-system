@@ -1,1 +1,73 @@
 # inventory-management-system
+===============================
+INVENTORY MANAGEMENT SYSTEM
+===============================
+
+🔧 TECHNOLOGY STACK
+- PHP
+- MySQL
+- HTML/CSS (Basic)
+- No framework (pure PHP)
+
+📁 PROJECT STRUCTURE
+- config.php             --> DB connection and session
+- index.php              --> Login page
+- home.php               --> User dashboard
+- admin.php              --> Admin dashboard
+- add_inventory.php      --> Add inventory
+- edit_inventory.php     --> Edit inventory (admin only)
+- delete_inventory.php   --> Delete inventory (admin only)
+- inventory_list.php     --> List inventories
+- logout.php             --> Log out
+- db.sql                 --> MySQL database schema
+
+====================
+🧱 DATABASE SETUP
+====================
+
+1. Import the `db.sql` file into your MySQL server.
+   You can do this using phpMyAdmin or MySQL CLI.
+
+2. Make sure your MySQL server is running.
+3. Update `config.php` if your MySQL username or password is different.
+
+=============================
+👤 DEFAULT USERS (LOGIN)
+=============================
+
+You can manually insert these users into the database after importing `db.sql`.
+
+--- ADMIN USER ---
+Username: admin
+Password: admin123
+
+--- NORMAL USER ---
+Username: user
+Password: user123
+
+========================
+🧪 MANUAL SQL INSERTS
+========================
+
+-- Insert Admin User:
+INSERT INTO users (username, password, role) 
+VALUES ('admin', '$2y$10$LQxlq3mB0h63FzB1wJSKle4f1Uqz3dACrWqvT4Qxk/4Uz/qH/Clc2', 'admin');
+
+-- Insert Normal User:
+INSERT INTO users (username, password, role) 
+VALUES ('user', '$2y$10$w1zENZzP2OSqvSYd9U.zJ.KIV62M3f94E2c9OlJpiFPN2sWoLeBKa', 'user');
+
+NOTE: Passwords are hashed using PHP's password_hash function.
+
+============================
+📦 HOW TO RUN LOCALLY
+============================
+
+1. Copy all files into your web server directory (e.g., htdocs for XAMPP).
+2. Start Apache and MySQL using XAMPP or WAMP.
+3. Open a browser and go to: http://localhost/inventory_system/index.php
+4. Use one of the login credentials above.
+
+That's it! You're ready to use your inventory management system.
+
+-- Developed with ❤️ in PHP
